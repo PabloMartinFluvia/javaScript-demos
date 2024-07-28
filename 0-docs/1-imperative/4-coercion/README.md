@@ -1,0 +1,1 @@
+For better examples use this [tool](https://github.com/USantaTecla-tech-dhtml/tool-jsCoercion/tree/master/v0)
