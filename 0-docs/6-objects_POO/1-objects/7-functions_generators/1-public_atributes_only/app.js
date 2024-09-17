@@ -20,10 +20,10 @@ function createObject(valueProperty) {
 }
 
 function method(object) {
-  private(object); // llamada a una función local
+  privateFunction(object); // llamada a una función local
   console.writeln(`property: ${object.property} - other: ${object.other}`);
   
-  function private(object){
+  function privateFunction(object){
     object.other++; 
     object.property++;
   }
