@@ -3,6 +3,12 @@ const { Console } = require("console-mpds");
 const console = new Console();
 
 function Clazz(parameter) {
+    /*
+     cada cop que l'operador new crida a la funció constructora ES DONEN D'ALTA ELS MEMEBRES DE NEW 
+     (i tmb els membres privats als que es facin referencia mitjançant clousures), ja que cada cop que
+     es crida a la funció constructora ES CREA UN NOU CONTEXT
+    */
+
     this.publicAttributeX = parameter;
     this.publicAttributeY = 0;
     this.publicInstanceMethod = function () {

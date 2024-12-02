@@ -7,6 +7,13 @@ function Clazz(parameter) {
     this.publicAttributeY = 0;
 }
 
+/*
+Donant d'alta els mètodes públics en el prototip permet que tots els objectes inicialitzats per la funció
+constructora emplein les mateixes funcions.
+    Cal que els atributs siguin públics (per a poder mencionar-los en els mètodes declarats en el prototip).
+    No es pot implementar mètodes privats.
+*/
+
 Clazz.prototype.publicInstanceMethod = function () {
     privateFunction(this);
     console.writeln(`publicAttributeX: ${this.publicAttributeX} - publicAttributeY: ${this.publicAttributeY}`);
