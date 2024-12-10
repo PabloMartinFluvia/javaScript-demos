@@ -41,3 +41,28 @@ consoleMPDS.writeln(`\nFor each:`)
 t.forEach((value, index, array) => array[index] = value + 1);
 consoleMPDS.writeln(t);  // 2,3,4,5
 
+consoleMPDS.writeln(`\nIndexOf:`)
+array = ['A', 'B', 'C'];
+consoleMPDS.writeln(array.indexOf('B')); // 1
+consoleMPDS.writeln(`\nIncludes with primitives:`)
+array.push(3);
+consoleMPDS.writeln(`${array.includes(3)}, ${array.includes('C')}, ${array.includes('c')}`); // true, true, false
+consoleMPDS.writeln(`\nIncludes with objects:`)
+function Coordinate (row, column) {
+    this.row = row;
+    this.column = column;
+}
+let coordinates = [new Coordinate(0,0), new Coordinate(1, 1), new Coordinate(-1, -1)];
+coordinates.forEach((coordinate, index) => array[index] = coordinate);
+consoleMPDS.writeln(array.includes(coordinates[1])); // true
+//consoleMPDS.writeln(array.contains(coordinates[1])); // ERROR
+const coordinateEqualsNOTIdentical = new Coordinate(1, 1)
+consoleMPDS.writeln(`${array.includes(coordinateEqualsNOTIdentical)}, due array sotres references`); // false
+Coordinate.prototype.equals = function(other) {
+    return this.row === other.row && this.column === other.column;
+}
+consoleMPDS.writeln(`${array.includes(coordinateEqualsNOTIdentical)}, due includes don't check equals method`); // false
+
+consoleMPDS.writeln(`\nSaber si incluye un objeto igual (pero no identico) usando 'some'`);
+consoleMPDS.writeln(`${array.some(array => array === coordinateEqualsNOTIdentical)}`); // false
+consoleMPDS.writeln(`${array.some(array => array.equals(coordinateEqualsNOTIdentical))}`); // true
