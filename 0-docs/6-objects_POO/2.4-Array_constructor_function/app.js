@@ -36,10 +36,17 @@ let t = [1, 2, 3, 4];
 consoleMPDS.writeln(t); // 1,2,3,4
 consoleMPDS.writeln(`Mapear:`)
 consoleMPDS.writeln(t.map(value => value ** 2));  // 1,4,9,16
+
 consoleMPDS.writeln(`\nFor each:`)
 // en documentació el missatge es crida a la variable 'array', xo no té sentit, ja que el seu length és 0
-t.forEach((value, index, array) => array[index] = value + 1);
-consoleMPDS.writeln(t);  // 2,3,4,5
+let test = [1, 2, 3, 4];
+test.forEach((value, index, array) => array[index] = value + 1);
+consoleMPDS.writeln(test);  // 2,3,4,5
+test.forEach(value => value = 1000000);
+consoleMPDS.writeln(`Failed: ${test}`);  // 2,3,4,5 
+// NO funciona, si vui modificar tots els valors aplicant la mateixa funció puc: 
+// A) com en el forEach previ: assignant el nou valor a la posició del array
+// B) fent un map, i assignant el array retornat al array previ
 
 consoleMPDS.writeln(`\nIndexOf:`)
 array = ['A', 'B', 'C'];
