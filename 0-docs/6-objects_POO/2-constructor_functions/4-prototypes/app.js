@@ -41,3 +41,13 @@ object.publicInstanceMethod();
 
 Clazz.prototype.atributeInPrototipe = "atributeInPrototipe";
 console.writeln(`object.atributeInPrototipe: ${object.atributeInPrototipe}`);
+
+
+
+console.writeln(`\nDins dels prototips els mètodes NO es poden declarar coma funcions fletxa:`)
+Clazz.prototype.arrowMethod = () => {    
+    console.writeln(`publicAttributeX: ${this.publicAttributeX} - publicAttributeY: ${this.publicAttributeY}`);       
+}
+
+let other = new Clazz(1);
+other.arrowMethod();
