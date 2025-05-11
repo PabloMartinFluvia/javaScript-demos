@@ -18,4 +18,5 @@ async function main(millis){
 }
   
 main(3000);
+main(1000);
 console.writeln(`Acción posterior?!?`);
