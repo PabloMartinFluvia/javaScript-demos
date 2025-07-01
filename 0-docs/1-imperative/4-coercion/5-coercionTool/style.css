@@ -1,0 +1,40 @@
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 15px;
+    text-align: center;    
+}
+
+label {
+    display: block;
+}
+
+td {
+    font-size: medium;
+}
+
+
+.error {
+    background-color: red;
+}
+
+.undefined {
+    background-color: gray;
+}
+
+.nan {
+    background-color: lightsalmon;
+}
+
+.interesting {
+    background-color: aqua;
+}
+
+.hidden {
+    display: none;
+}

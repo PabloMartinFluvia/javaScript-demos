@@ -1,0 +1,38 @@
+import { Concat } from "./string/conat.js";
+import { StringCoerCion } from "./string/stringCoercion.js";
+import { NumberCoercion } from "./numbers/numberCoercion.js";
+import { Opposite } from "./numbers/opposite.js";
+import { Sum } from "./numbers/sum.js";
+import { Rest } from "./numbers/rest.js";
+import { Multiplication } from "./numbers/multiplication.js";
+import { Pow } from "./numbers/pow.js";
+import { Division } from "./numbers/div.js";
+import { Module } from "./numbers/module.js";
+import { BooleanCoercion } from "./boolean/booleanCoercion.js";
+import { Negation } from "./boolean/negation.js";
+import { And } from "./boolean/and.js";
+import { Or } from "./boolean/or.js";
+import { StrictEquals } from "./relationals/strictequals.js";
+import { SoftEquals } from "./relationals/softequals.js";
+import { Comparative } from "./relationals/comparative.js";
+import { Access } from "./objects/access.js";
+
+
+new BooleanCoercion().render();
+new Negation().render();
+new And().render();
+new Or().render();
+new StringCoerCion().render();
+new Concat().render();
+new NumberCoercion().render();
+new Opposite().render();
+new Sum().render();
+new Rest().render();
+new Multiplication().render();
+new Pow().render();
+new Division().render();
+new Module().render();
+new StrictEquals().render();
+new SoftEquals().render();
+new Comparative().render();
+new Access().render();
